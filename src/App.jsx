@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/dashboard/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import SignUp from "./pages/Auth/SignUp";
 import Login from "./pages/Auth/Login";
 import ResetPassword from "./pages/Auth/ResetPassword";
 import ConfirmResetPassword from "./pages/Auth/ConfirmResetPassword";
+import Faq from "./pages/Faq/Faq";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/resetpassword" element={<ResetPassword/>}/>
           <Route path="/confirmpassword" element={<ConfirmResetPassword/>}/>
+          <Route path="/faq" element={<Faq/>}/>
         </Routes>
       </Router>
     </div>
