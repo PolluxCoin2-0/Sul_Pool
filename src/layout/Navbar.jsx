@@ -26,9 +26,12 @@ const Navbar = () => {
             HOME
           </p>
           </Link>
+
+          <Link to="/faq">
           <p className="text-gray wallpoet-regular md:text-md lg:text-xl">
             FAQ
           </p>
+          </Link>
           <p className="text-gray wallpoet-regular md:text-md lg:text-xl">
             Twitter
           </p>
@@ -76,16 +79,21 @@ const Navbar = () => {
       {openMenu && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-black  shadow-lg z-50">
           <ul className="flex flex-col items-center space-y-4 py-4">
+            <Link to="/dashboard">
             <li>
               <p className="text-gray wallpoet-regular text-md font-bold">
                 HOME
               </p>
             </li>
+            </Link>
+
+            <Link to="/faq">
             <li>
               <p className="text-gray wallpoet-regular text-md font-bold">
                 FAQ
               </p>
             </li>
+            </Link>
             <li>
               <p className="text-gray wallpoet-regular text-md font-bold">
                 Twitter
@@ -96,6 +104,8 @@ const Navbar = () => {
                 Telegram
               </p>
             </li>
+            
+            <Link to="/login">
             <li>
               <button
                 type="button"
@@ -104,6 +114,7 @@ const Navbar = () => {
                 LOGIN
               </button>
             </li>
+            </Link>
           </ul>
         </div>
       )}
