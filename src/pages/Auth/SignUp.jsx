@@ -48,7 +48,7 @@ const SignUp = () => {
           className="absolute top-80 md:top-20 right-0 h-[50%] md:h-[90%] w-48 md:w-72 lg:w-80 xl:w-auto object-cover"
         />
 
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white flex flex-col justify-center items-center">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white flex flex-col justify-center items-center mt-12">
           <form
             className="p-4 md:p-6 shadow-lg w-[300px] md:w-[430px] bg-[#FFFFFF] bg-opacity-5 border-[1px] border-[#D9D9D9] border-opacity-30 rounded-2xl"
             onSubmit={handleSubmit}

@@ -22,7 +22,7 @@ const Dashboard = () => {
         />
 
         {/* Text content centered between both images */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white flex flex-col justify-center items-center px-2 md:px-28">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white flex flex-col justify-center items-center px-2 md:px-28 mt-12">
           <p
             className="text-4xl md:text-7xl lg:text-8xl text-transparent bg-clip-text bg-purpleGradient wallpoet-regular drop-shadow-lg tracking-wide"
             aria-label="Sulpool"
