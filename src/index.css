@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    position: relative; /* Ensures that the pseudo-element is positioned relative to the body */
+    background-image: url('./assets/dashboard.png');
+    background-size: cover, cover, cover;
+    background-position: center, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat; 
+ }
+
+.syne-font {
+  font-family: "Syne", sans-serif; /* Ensure font-family is correctly set */
+  font-weight: 700; /* Adjust weight as needed: 400 (normal), 700 (bold), etc. */
+  font-style: normal; /* Use 'italic' if needed */
+}
+
+.wallpoet-regular {
+  font-family: "Wallpoet", sans-serif;
+}
+
+
