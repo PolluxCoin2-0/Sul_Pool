@@ -5,6 +5,8 @@ import Login from "./pages/Auth/Login";
 import ResetPassword from "./pages/Auth/ResetPassword";
 import ConfirmResetPassword from "./pages/Auth/ConfirmResetPassword";
 import Faq from "./pages/Faq/Faq";
+import Home from "./pages/Home/Home";
+import Details from "./pages/DetailPage/Details";
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
           <Route path="/resetpassword" element={<ResetPassword/>}/>
           <Route path="/confirmpassword" element={<ConfirmResetPassword/>}/>
           <Route path="/faq" element={<Faq/>}/>
+          <Route path="/home" element={<Home/>}/>
+          <Route path="/details" element={<Details/>}/>
         </Routes>
       </Router>
     </div>
