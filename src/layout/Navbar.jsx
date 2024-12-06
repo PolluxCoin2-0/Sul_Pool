@@ -21,7 +21,7 @@ const Navbar = () => {
         </Link>
 
         <div className="flex flex-row justify-center items-center md:space-x-8 lg:space-x-12 xl:space-x-20 -ml-48">
-          <Link to="/dashboard">
+          <Link to="/home">
           <p className="text-gray wallpoet-regular md:text-md lg:text-xl cursor-pointer">
             HOME
           </p>
@@ -79,7 +79,7 @@ const Navbar = () => {
       {openMenu && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-black  shadow-lg z-50">
           <ul className="flex flex-col items-center space-y-4 py-4">
-            <Link to="/dashboard">
+            <Link to="/home">
             <li>
               <p className="text-gray wallpoet-regular text-md font-bold">
                 HOME
