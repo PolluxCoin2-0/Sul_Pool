@@ -2,6 +2,10 @@ import Footer from "../../layout/Footer";
 import Navbar from "../../layout/Navbar";
 import HomeBg from "../../assets/HomeBg.png";
 import sulLogo from "../../assets/sulLogo.png";
+import { MdFileCopy } from "react-icons/md";
+import { TiTick } from "react-icons/ti";
+import { toast } from "react-toastify";
+import { useState } from "react";
 
 const tableData = [
   {
@@ -35,6 +39,23 @@ const tableData = [
 ];
 
 const Details = () => {
+  const [isCopy, setIsCopy] = useState(false);
+
+  const handleCopy = () => {
+    const referralLink = "dvlkjvflsdkjvjkssderbh4dnbsfnd54sn5fb4g4";
+    navigator.clipboard
+      .writeText(referralLink)
+      .then(() => {
+        setIsCopy(true); // Update the copy state
+        toast.success("Referral link copied to clipboard");
+        setTimeout(() => setIsCopy(false), 2000); // Reset copy state after 2 seconds
+      })
+      .catch((error) => {
+        toast.error("Failed to copy referral link");
+        console.error(error);
+      });
+  };
+
   return (
     <div
       className="flex flex-col min-h-screen"
@@ -58,12 +79,25 @@ const Details = () => {
             <p className="text-white opacity-60 syne-font text-sm md:text-[16px]">
               Referral Link:{" "}
             </p>
-            <p className="text-white opacity-60 syne-font text-xs md:text-[16px] mt-2 md:mt-0">
+            <p
+              className="text-white opacity-60 syne-font text-xs md:text-[16px] mt-2 md:mt-0"
+              onClick={handleCopy}
+            >
               dvlkjvflsdkjvjkssderbh4dnbsfnd54sn5fb4g4
             </p>
           </div>
           <p className="text-white opacity-60 text-sm md:text-lg mt-2 md:mt-0">
-            Copy
+            {isCopy ? (
+              <div className="flex flex-row items-center">
+                <TiTick className="text-green-400" size={24} />
+                <span className="pl-1">Copied</span>
+              </div>
+            ) : (
+              <div className="flex flex-row items-center" onClick={handleCopy}>
+                <MdFileCopy className="text-light-gray" />
+                <span className="pl-1">Copy</span>
+              </div>
+            )}
           </p>
         </div>
 
@@ -137,26 +171,26 @@ const Details = () => {
 
         {/* table */}
         <div
-          className="bg-darkGray border-[1px] border-white border-opacity-5 rounded-2xl p-2 md:p-6 mt-10 overflow-x-scroll md:overflow-hidden"
+          className="bg-darkGray border-[1px] border-white border-opacity-5 rounded-2xl p-2 md:p-6 mt-10 overflow-x-scroll md:overflow-hidden w-full"
           style={{
             backdropFilter: "blur(34px)", // Optional: Adds a blur effect
             opacity: "0.7",
           }}
         >
           <ul className="flex flex-row bg-blue justify-between space-x-8 p-3 md:p-4 rounded-md min-w-[600px]">
-            <li className="text-white syne-font text-nowrap text-sm md:text-[16px]">
+            <li className="text-white syne-font text-nowrap text-sm md:text-[16px] w-[20%]  text-center">
               Program
             </li>
-            <li className="text-white syne-font text-nowrap text-sm md:text-[16px]">
+            <li className="text-white syne-font text-nowrap text-sm md:text-[16px] w-[20%] text-center">
               Start Date
             </li>
-            <li className="text-white syne-font text-nowrap text-sm md:text-[16px]">
+            <li className="text-white syne-font text-nowrap text-sm md:text-[16px] w-[20%] text-center">
               Amount
             </li>
-            <li className="text-white syne-font text-nowrap text-sm md:text-[16px]">
+            <li className="text-white syne-font text-nowrap text-sm md:text-[16px] w-[20%] text-center">
               Maturity Date
             </li>
-            <li className="text-white syne-font text-nowrap text-sm md:text-[16px]">
+            <li className="text-white syne-font text-nowrap text-sm md:text-[16px] w-[20%]  text-center">
               Time Left
             </li>
           </ul>
@@ -165,19 +199,19 @@ const Details = () => {
             return (
               <div key={index} className="">
                 <ul className="flex flex-row justify-between space-x-8 p-4 min-w-[600px]">
-                  <li className="text-white syne-font text-nowrap text-xs md:text-[12px]">
+                  <li className="text-white syne-font text-nowrap text-xs md:text-[12px] w-[20%]  text-center">
                     {data.program}
                   </li>
-                  <li className="text-white syne-font text-nowrap text-xs md:text-[12px]">
+                  <li className="text-white syne-font text-nowrap text-xs md:text-[12px] w-[20%]  text-center">
                     {data.startDate}
                   </li>
-                  <li className="text-white syne-font text-nowrap text-xs md:text-[12px]">
+                  <li className="text-white syne-font text-nowrap text-xs md:text-[12px] w-[20%]  text-center">
                     {data.amount}
                   </li>
-                  <li className="text-white syne-font text-nowrap text-xs md:text-[12px]">
+                  <li className="text-white syne-font text-nowrap text-xs md:text-[12px] w-[20%]  text-center">
                     {data.maturityDate}
                   </li>
-                  <li className="text-white syne-font text-nowrap text-xs md:text-[12px]">
+                  <li className="text-white syne-font text-nowrap text-xs md:text-[12px] w-[20%]  text-center">
                     {data.timeLeft}
                   </li>
                 </ul>

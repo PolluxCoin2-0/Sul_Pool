@@ -23,7 +23,7 @@ const Home = () => {
       {/* Main Content (expandable) */}
       <div className="px-4 md:px-4 lg:px-8 xl:px-16 2xl:px-28 ">
         {/* intro */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between w-full mt-16 md:mt-12 2xl:mt-0">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between w-full mt-16 md:mt-12 2xl:mt-8">
           <div className="w-full md:w-[50%] xl:w-[50%]">
             <p className="text-white syne-font text-md md:text-lg xl:text-2xl">
               SULMINE STAKING MADE EASY

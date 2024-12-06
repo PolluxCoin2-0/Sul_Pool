@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import SignUp from "./pages/Auth/SignUp";
 import Login from "./pages/Auth/Login";
@@ -13,7 +15,16 @@ function App() {
   return (
     <div>
       <Router>
+      <ToastContainer
+            position="top-center"
+            autoClose={3000}
+            theme="dark"
+            newestOnTop={true}
+            pauseOnFocusLoss
+            toastClassName="custom-toast"
+          />
         <Routes>
+       
           <Route path="/" element={<Dashboard/>} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/signup" element={<SignUp/>}/>

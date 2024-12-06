@@ -55,9 +55,11 @@ const Navbar = () => {
       {/* Mobile Navigation */}
 
       <div className="md:hidden flex justify-between items-center ">
+      <Link to="/dashboard">
         <div>
           <img src={SulpoolLogo} alt="Sulpool Logo" className="w-[50%]" />
         </div>
+        </Link>
 
         {/* Hamburger Icon or Close Icon */}
         <div>
