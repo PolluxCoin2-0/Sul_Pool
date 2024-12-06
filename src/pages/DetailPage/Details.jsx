@@ -111,10 +111,10 @@ const Details = () => {
               <input
                 type="number"
                 placeholder="Enter Amount"
-                className=" border-[1px] border-white border-opacity-15 rounded-xl p-4 bg-darkGray outline-none w-[75%] placeholder:text-lightVoilet syne-font text-xs md:text-sm lg:text-[16px]"
+                className=" border-[1px] border-white border-opacity-15 rounded-xl p-4 bg-darkGray outline-none w-[75%] text-white placeholder:text-lightVoilet syne-font text-xs md:text-sm lg:text-[16px]"
               />
               <div
-                className="flex flex-row items-center space-x-1 lg:space-x-2 xl:space-x-3 w-[25%] border-[1px] p-1 md:p-2 border-white border-opacity-15 rounded-xl bg-darkGray outline-none 
+                className="flex flex-row  items-center space-x-1 lg:space-x-2 xl:space-x-3 w-[25%] border-[1px] p-1 md:p-2 border-white border-opacity-15 rounded-xl bg-darkGray outline-none 
              placeholder:text-lightVoilet syne-font pt-2 pb-2 lg:pt-1 lg:pb-1 "
               >
                 <img src={sulLogo} alt="" className="w-7 md:w-8 lg:w-10" />
@@ -145,7 +145,7 @@ const Details = () => {
                 <input
                   type="number"
                   placeholder="Enter Amount"
-                  className=" border-[1px] border-white border-opacity-15 rounded-xl p-4 bg-darkGray outline-none w-[75%] placeholder:text-lightVoilet syne-font text-xs md:text-sm lg:text-[16px]"
+                  className=" border-[1px] border-white border-opacity-15 rounded-xl p-4 bg-darkGray outline-none w-[75%] text-white placeholder:text-lightVoilet syne-font text-xs md:text-sm lg:text-[16px]"
                 />
                 <div
                   className="flex flex-row items-center space-x-1 lg:space-x-2 xl:space-x-3 w-[25%] border-[1px] p-1 md:p-2 border-white border-opacity-15 rounded-xl bg-darkGray outline-none 
