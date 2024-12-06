@@ -90,12 +90,12 @@ const Details = () => {
             {isCopy ? (
               <div className="flex flex-row items-center">
                 <TiTick className="text-green-400" size={24} />
-                <span className="pl-1">Copied</span>
+                <span className="pl-1 syne-font">Copied</span>
               </div>
             ) : (
               <div className="flex flex-row items-center" onClick={handleCopy}>
                 <MdFileCopy className="text-light-gray" />
-                <span className="pl-1">Copy</span>
+                <span className="pl-1 syne-font">Copy</span>
               </div>
             )}
           </p>
