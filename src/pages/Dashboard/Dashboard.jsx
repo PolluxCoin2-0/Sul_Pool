@@ -1,10 +1,10 @@
 import Navbar from "../../layout/Navbar";
-import leftBgImg from "../../assets/leftBg1.png";
+import leftBgImg from "../../assets/bgImage.png";
 import rightBgImg from "../../assets/rightBg.png";
 
 const Dashboard = () => {
   return (
-    <div className="overflow-y-hidden h-auto">
+    <div className="overflow-y-hidden h-auto ">
       <div>
         <Navbar />
       </div>
@@ -12,7 +12,8 @@ const Dashboard = () => {
         <img
           src={leftBgImg}
           alt=""
-          className="absolute top-60 md:top-60 h-[50%] lg:h-[50%] w-48 md:w-72 lg:w-80 xl:w-auto object-cover "
+          className="absolute top-10 md:top-60 h-[50%] lg:h-[48%] w-48 md:w-72 lg:w-80 xl:w-auto object-cover -left-[400px]"
+          style={{rotate: "-45deg"}}
         />
 
         <img
